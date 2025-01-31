@@ -2,12 +2,14 @@ spring:
   application:
     name: bad-backend
   datasource:
-    url: jdbc:postgresql://localhost:5432/bad
+    url: jdbc:postgresql://localhost:5432/bad?currentSchema=bad_schema
     username: bad_user
     password: ${bad_password}
   jpa:
     hibernate:
       ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
     show-sql: true
 #  autoconfigure:
 #    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration

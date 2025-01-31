@@ -1,7 +1,7 @@
 package boonstra.application.development.badbackend.adapter.`in`
 
-import boonstra.application.development.badbackend.core.application.port.`in`.PostMessagePort
 import boonstra.application.development.badbackend.core.application.usecase.PostMessageUseCase
+import boonstra.application.development.badbackend.core.domain.model.Message
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -15,15 +15,15 @@ class PostMessageController(
 ) {
 
     data class PostMessageRequest(
-        val email: String,
+        val emailAddress: String,
         val text: String,
     )
 
     @PostMapping
     fun postMessage(@RequestBody request: PostMessageRequest) : ResponseEntity<String> {
         postMessageUseCase.postMessage(
-            PostMessagePort.PostMessageParam(
-                email = request.email,
+            Message(
+                emailAddress = request.emailAddress,
                 text = request.text
             )
         )

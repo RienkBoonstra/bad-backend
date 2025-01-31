@@ -1,11 +1,8 @@
 package boonstra.application.development.badbackend.core.application.port.`in`
 
+import boonstra.application.development.badbackend.core.domain.model.Message
+
 interface PostMessagePort {
 
-    data class PostMessageParam(
-        val email: String,
-        val text: String,
-    )
-
-    fun postMessage(request: PostMessageParam) : Unit
+    fun postMessage(message: Message) : Unit
 }
