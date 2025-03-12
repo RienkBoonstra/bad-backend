@@ -1,4 +1,4 @@
-package boonstra.application.development.badbackend.adapter.out.storage.message
+package boonstra.application.development.badbackend.adapter.out.storage
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
