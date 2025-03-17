@@ -52,3 +52,6 @@ Troubleshooting:
 If you don't see the URL in your dashboard or it isn't accessible, check if the deployment is successful and the service is running. 
 You may also want to ensure that the app is correctly configured to expose the necessary ports and that no firewall settings are blocking the traffic.
 ENDE ANTWORT CHATGPT
+## Remet en place une docker image
+Attention, en quelque sorte telecharger une nouvelle docker images avec la meme tag qu'est la deja, ne resulte pas 
+d'une nouvelle version, quand on mettre en place le tag de nouveau.  

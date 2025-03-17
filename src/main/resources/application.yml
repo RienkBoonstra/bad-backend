@@ -1,3 +1,8 @@
+app:
+  version: ${APP_VERSION:keine-App-Version-angegeben}
+
 spring:
+  profiles:
+    active: dummy
   application:
     name: bad-backend
